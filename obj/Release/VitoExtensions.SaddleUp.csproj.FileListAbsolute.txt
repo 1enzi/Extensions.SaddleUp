@@ -30,3 +30,6 @@ E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\bin\Release\Xama
 E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\bin\Release\Xamarin.Forms.Xaml.dll
 E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\bin\Release\Xamarin.Forms.Xaml.pdb
 E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\obj\Release\VitoExte.3B0B1598.Up2Date
+E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\obj\Release\VitoExtensions.SaddleUp_MarkupCompile.cache
+E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\obj\Release\ToolWindows\SaddleUpSplashControl.baml
+E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\obj\Release\ToolWindows\SaddleUpSplashControl.g.cs

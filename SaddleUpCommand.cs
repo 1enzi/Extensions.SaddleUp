@@ -5,6 +5,7 @@ using EnvDTE;
 using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
+using VitoExtensions.SaddleUp.ToolWindows;
 
 namespace VitoExtensions.SaddleUp
 {
@@ -56,7 +57,6 @@ namespace VitoExtensions.SaddleUp
             }
 
             await ShowSaddleUpWindowAsync();
-            dte.StatusBar.Text = "Saddled up! 🐎 All unpinned tabs ridden off.";
         }
 
         private IVsWindowFrame GetWindowFrameFromMoniker(string moniker)
@@ -105,13 +105,18 @@ namespace VitoExtensions.SaddleUp
             await _package.JoinableTaskFactory.SwitchToMainThreadAsync();
 
             var window = await _package.ShowToolWindowAsync(
-                typeof(SaddleUpSplashWindow),
+                typeof(SaddleUpSplash),
                 0,
                 true,
                 _package.DisposalToken);
 
-            if ((null == window) || (null == window.Frame))
+            if (window is null || window.Frame is null)
                 throw new NotSupportedException("Can't show 'Saddle Up! 🐎' window!");
+
+            if (window.Content is SaddleUpSplashControl control)
+            {
+                control.RefreshQuote();
+            }
         }
     }
 }

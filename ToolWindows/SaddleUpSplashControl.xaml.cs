@@ -1,20 +1,19 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
+using System.Windows;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
-using System.Windows;
-using System;
-using Microsoft.VisualStudio.Shell;
 using WpfAnimatedGif;
 
-namespace VitoExtensions.SaddleUp
+namespace VitoExtensions.SaddleUp.ToolWindows
 {
-    public class SaddleUpSplashWindow : ToolWindowPane
+    /// <summary>
+    /// Interaction logic for SaddleUpSplashControlControl.
+    /// </summary>
+    public partial class SaddleUpSplashControl : UserControl
     {
-        #region Private
         private readonly string _path = "pack://application:,,,/VitoExtensions.SaddleUp;component/Resources";
-        #endregion
 
-        #region Strings
         private readonly string[] _gifs =
         [
             "horse_animated.gif",
@@ -61,51 +60,30 @@ namespace VitoExtensions.SaddleUp
             "Your tabs ascended.",
             "They left to start a jazz band."
         ];
-        #endregion
 
-        public SaddleUpSplashWindow() : base(null)
+        public SaddleUpSplashControl()
         {
-            ThreadHelper.ThrowIfNotOnUIThread();
+            InitializeComponent();
 
-            Caption = "Saddle Up!";
-            BitmapResourceID = 301;
-            BitmapIndex = 1;
+            var random = new Random();
 
-            var grid = new Grid
+            var gifUri = new Uri($"{_path}/{_gifs[random.Next(_gifs.Length)]}");
+            var phrase = _phrases[random.Next(_phrases.Length)];
+
+            PhraseText.Text = phrase;
+
+            var stream = Application.GetResourceStream(gifUri)?.Stream;
+            if (stream != null)
             {
-                Background = Brushes.Transparent,
-                Width = 200,
-                Height = 120
-            };
-
-            var image = new Image
-            {
-                Width = 96,
-                Height = 64
-            };
-
-            var gifUri = new Uri($"{_path}/{_gifs[new Random().Next(_gifs.Length)]}");
-            var gifStream = Application.GetResourceStream(gifUri)?.Stream;
-
-            if (gifStream != null)
-            {
-                ImageBehavior.SetAnimatedSource(image, new BitmapImage(gifUri));
+                ImageBehavior.SetAnimatedSource(GifImage, new BitmapImage(gifUri));
             }
+        }
 
-            var text = new TextBlock
-            {
-                Text = _phrases[new Random().Next(_phrases.Length)],
-                FontSize = 10,
-                Foreground = Brushes.White,
-                HorizontalAlignment = HorizontalAlignment.Center,
-                VerticalAlignment = VerticalAlignment.Bottom,
-                Margin = new Thickness(0, 0, 0, 8),
-            };
-
-            grid.Children.Add(image);
-            grid.Children.Add(text);
-
-            Content = grid;
+        public void RefreshQuote()
+        {
+            var random = new Random();
+            var phrase = _phrases[random.Next(_phrases.Length)];
+            PhraseText.Text = phrase;
         }
     }
 }

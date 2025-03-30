@@ -2,6 +2,7 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Threading;
+using VitoExtensions.SaddleUp.ToolWindows;
 using Task = System.Threading.Tasks.Task;
 
 namespace VitoExtensions.SaddleUp
@@ -25,8 +26,8 @@ namespace VitoExtensions.SaddleUp
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
-    [ProvideToolWindow(typeof(SaddleUpSplashWindow), Width = 220, Height = 160)]
     [Guid(PackageGuidString)]
+    [ProvideToolWindow(typeof(SaddleUpSplash), Width = 220, Height = 160)]
     public sealed class SaddleUpCommandPackage : AsyncPackage
     {
         /// <summary>

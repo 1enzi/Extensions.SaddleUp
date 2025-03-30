@@ -30,3 +30,6 @@ E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\obj\Debug\VitoEx
 E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\obj\Debug\extension.vsixmanifest
 E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\obj\Debug\files.json
 E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\obj\Debug\createTemplateManifests.cache
+E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\obj\Debug\ToolWindows\SaddleUpSplashControl.baml
+E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\obj\Debug\ToolWindows\SaddleUpSplashControl.g.cs
+E:\source\repos\VitoExtensions.SaddleUp\VitoExtensions.SaddleUp\obj\Debug\VitoExtensions.SaddleUp_MarkupCompile.cache
