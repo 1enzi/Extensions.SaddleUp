@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="VitoExtensions.SaddleUp.ToolWindows.SaddleUpSplashControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:gif="http://wpfanimatedgif.codeplex.com"
+             Width="200" Height="120"
+             Background="Transparent">
+    <Grid>
+        <Image x:Name="GifImage" Width="96" Height="64"/>
+        <TextBlock x:Name="PhraseText"
+                   FontSize="10"
+                   Foreground="White"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   Margin="0,0,0,8"/>
+    </Grid>
+</UserControl>
