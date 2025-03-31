@@ -11,7 +11,7 @@ namespace VitoExtensions.SaddleUp
 {
     internal sealed class SaddleUpCommand
     {
-        public const int CommandId = 0x0100;
+        public const int CommandId = 0x0200;
         public static readonly Guid CommandSet = new("5f5e1d0d-9e67-4d14-9e67-abcde1234567");
 
         private readonly AsyncPackage _package;
