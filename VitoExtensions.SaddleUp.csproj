@@ -95,7 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <VSCTCompile Include="SaddleUpCommandPackage.vsct">
-      <ResourceName>Menus.ctmenu</ResourceName>
+      <ResourceName>SaddleUpMenus.ctmenu</ResourceName>
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>

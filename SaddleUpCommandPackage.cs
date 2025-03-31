@@ -25,7 +25,7 @@ namespace VitoExtensions.SaddleUp
     /// </para>
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
-    [ProvideMenuResource("Menus.ctmenu", 1)]
+    [ProvideMenuResource("SaddleUpMenus.ctmenu", 1)]
     [Guid(PackageGuidString)]
     [ProvideToolWindow(typeof(SaddleUpSplash), Width = 220, Height = 160)]
     public sealed class SaddleUpCommandPackage : AsyncPackage
